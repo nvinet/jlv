@@ -500,10 +500,10 @@ footer{ width:100%; float:left;}
 
 
 /* SHOWCASE THUMB COLORS */
-.bg-color1{ background:rgba(233,57,64,0.6);}
-.bg-color2{ background:rgba(243,194,23,0.6);}
-.bg-color3{ background:rgba(-255,-255,-255,0.6);}
-.bg-color4{ background:rgba(20,208,179,0.6);}
+.bg-color1{ background:rgba(59,92,109,0.6);}
+.bg-color2{ background:rgba(252,145,0,0.6);}
+.bg-color3{ background:rgba(124,45,94,0.6);}
+.bg-color4{ background:rgba(212,81,94,0.6);}
 
 
 
@@ -511,7 +511,7 @@ footer{ width:100%; float:left;}
 /* NAVBAR */
 .navbar-default{ width:100%; float:left; background:none; border:none; position:absolute; left:0; top:0; z-index:4; transform: translateY(-100%);}
 .navbar-default{-webkit-transition: .55s ease-in-out;-moz-transition: .55s ease-in-out;-ms-transition: .55s ease-in-out; -o-transition: .55s ease-in-out; transition: .55s ease-in-out; transition-delay: 1.5s;}
-.navbar-default .logo{ height:36px; float:left; margin:20px 0;}
+.navbar-default .logo{ height:150px; float:left; margin:20px 0;}
 .navbar-default.show{transform: translateY(0);}
 .navbar-default .navbar-nav{ float:right; margin:20px 0;}
 .navbar-default .navbar-nav li{ float:left;}
@@ -592,8 +592,8 @@ footer{ width:100%; float:left;}
 .slider{ width:100%; height:100%; background:#1d1d1d; float:left; position:relative; overflow:hidden; z-index:3; margin-top:400px;}
 .slider .slider-inner{ width:100%; height:100%; float:left; position:fixed;}
 .slider .banner { width:100%; height:100%; float:left; }
-.slider h2{font-size:100px; color:#fff; letter-spacing:20px;}
-.slider h5{font-size:20px; color:#fff; font-family:jaapokki; letter-spacing:5px;}
+.slider h2{font-size:80px; color:#fff; letter-spacing:20px;}
+.slider h5{font-size:40px; color:#fff; letter-spacing:5px;}
 .slider .video-bg{ width:100%; height:100%; float:left; position:relative; overflow:hidden;}
 .slider .video-bg:after{content:''; width:100%; height:100%; position:absolute; left:0; top:0; background:rgba(238,54,67,0.8); z-index:2;}
 .slider .video-bg video{ width:100%; min-height:100%; float:left; position:absolute; left:0; top:0; z-index:1;}
@@ -633,7 +633,7 @@ footer{ width:100%; float:left;}
 
 /* TITLE BOX */
 .title-box{ width:100%; float:left; text-align:center; margin-bottom:40px;}
-.title-box h2{font-size:90px; font-family:jaapokki; margin:0;}
+.title-box h2{font-size:90px; margin:0;}
 .title-box h5{font-size:12px; font-weight:800; letter-spacing:2px; text-transform:uppercase;}
 .title-box .shape{font-family:jaapokki; font-size:30px; margin:40px 0; color:#ee3643;}
 
@@ -642,7 +642,7 @@ footer{ width:100%; float:left;}
 
 /* ABOUT US */
 .about-us{ width:100%; float:left; padding:100px 0;}
-.about-us h2{ font-size:90px; font-family:jaapokki; margin-left:-8px;}
+.about-us h2{ font-size:90px; margin-left:-8px;}
 .about-us p{ line-height:24px; opacity:0.6; font-weight:300; letter-spacing:1px;}
 .about-us h3{ font-weight:400; text-transform:uppercase; letter-spacing:3px; font-size:14px; margin-bottom:40px;}
 .about-us img{ width:100%;}
@@ -830,7 +830,7 @@ footer{ width:100%; float:left;}
 
 
 /* FOOTER */
-.footer-space{ width:100%; height:410px; float:left; position:relative; z-index:2;}
+.footer-space{ width:100%; height:250px; float:left; position:relative; z-index:2;}
 footer{ width:100%; float:left; background:#1d1d1d; color:#fff; position:fixed; bottom:0; left:0; z-index:2;}
 footer .logo{ width:107px; display:inline-block; margin-bottom:20px; margin-top:100px;}
 footer h3{ font-size:40px; font-family:jaapokki; text-transform:uppercase; margin-bottom:100px;}
