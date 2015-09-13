@@ -5,7 +5,6 @@
   },
   "scripts": {
     "start": "node ./web.js",
-    "postinstall": "bower install && gulp"
   },
   "dependencies": {
     "express": "^4.13.3",
