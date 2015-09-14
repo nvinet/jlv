@@ -6,6 +6,7 @@ var gzippo = require('gzippo'),
 var app = express();
 app.use(morgan('dev'));
 app.use(gzippo.staticGzip("dist"));
+
 app.use(express.static(path.join(__dirname, 'dist')));
 
 app.set('port', process.env.PORT || 3000);

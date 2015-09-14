@@ -48,12 +48,42 @@ gulp.task('html', ['styles'], () => {
     .pipe(assets)
     .pipe($.if('*.js', $.uglify()))
     .pipe($.if('*.css', $.minifyCss({compatibility: '*'})))
-    .pipe($.rev())
+    //.pipe($.rev())
     .pipe(assets.restore())
     .pipe($.useref())
-    .pipe($.revReplace())
+    //.pipe($.revReplace())
     .pipe($.if('*.html', $.minifyHtml({conditionals: true, loose: true})))
+    .pipe(gulp.dest('.tmp/useref'));
+});
+
+
+gulp.task('revision', ['html', 'images', 'ico'], () => {
+  return gulp.src(['.tmp/useref/**', "!.tmp/useref/*.html"])
+    .pipe($.rev())
+    .pipe(gulp.dest('dist'))
+    .pipe($.rev.manifest())
     .pipe(gulp.dest('dist'));
+});
+
+gulp.task('moveHTML', ['revision'], () => {
+  return gulp.src(".tmp/useref/*.html")
+    .pipe(gulp.dest("dist"));
+});
+
+gulp.task("revreplace", ["moveHTML"], () => {
+  var manifest = gulp.src("./dist/rev-manifest.json");
+
+  gulp.src("dist/*.html")
+    .pipe($.revReplace({manifest: manifest}))
+    .pipe(gulp.dest("dist"));
+});
+
+gulp.task("cssRevReplace", ['revision'], () => {
+  var manifest = gulp.src("./dist/rev-manifest.json");
+
+  gulp.src("dist/styles/*.css")
+    .pipe($.revReplace({manifest: manifest}))
+    .pipe(gulp.dest("dist/styles"))
 });
 
 gulp.task('images', () => {
@@ -69,7 +99,7 @@ gulp.task('images', () => {
       console.log(err);
       this.end();
     })))
-    .pipe(gulp.dest('dist/images'));
+    .pipe(gulp.dest('.tmp/useref/images'));
 });
 
 gulp.task('ico', () => {
@@ -85,7 +115,7 @@ gulp.task('ico', () => {
         console.log(err);
         this.end();
       })))
-    .pipe(gulp.dest('dist/ico'));
+    .pipe(gulp.dest('.tmp/useref/ico'));
 });
 
 gulp.task('fonts', () => {
@@ -174,7 +204,7 @@ gulp.task('wiredep', () => {
     .pipe(gulp.dest('app'));
 });
 
-gulp.task('build', ['lint', 'html', 'images', 'ico', 'fonts', 'extras'], () => {
+gulp.task('build', ['lint', 'revreplace', 'cssRevReplace', 'fonts', 'extras'], () => {
   return gulp.src('dist/**/*').pipe($.size({title: 'build', gzip: true}));
 });
 
