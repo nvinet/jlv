@@ -1,13 +1,14 @@
-var gzippo = require('gzippo'),
+var compression = require('compression'),
   express = require('express'),
   morgan = require('morgan'),
   path = require('path');
 
 var app = express();
 app.use(morgan('dev'));
-app.use(gzippo.staticGzip("dist"));
+app.use(compression());
 
-app.use(express.static(path.join(__dirname, 'dist')));
+var oneMonth = 2629746000;
+app.use(express.static(path.join(__dirname, 'dist'), { maxAge: oneMonth }));
 
 app.set('port', process.env.PORT || 3000);
 var server = app.listen(app.get('port'), function() {
