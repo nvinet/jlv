@@ -48,43 +48,12 @@ gulp.task('html', ['styles'], () => {
     .pipe(assets)
     .pipe($.if('*.js', $.uglify()))
     .pipe($.if('*.css', $.minifyCss({compatibility: '*'})))
-    //.pipe($.rev())
     .pipe(assets.restore())
     .pipe($.useref())
-    //.pipe($.revReplace())
     .pipe($.if('*.html', $.minifyHtml({conditionals: true, loose: true})))
-    .pipe(gulp.dest('.tmp/useref'));
-});
-
-
-gulp.task('revision', ['html', 'images', 'ico'], () => {
-  return gulp.src(['.tmp/useref/**', "!.tmp/useref/*.html"])
-    .pipe($.rev())
-    .pipe(gulp.dest('public'))
-    .pipe($.rev.manifest())
     .pipe(gulp.dest('public'));
 });
 
-gulp.task('moveHTML', ['revision'], () => {
-  return gulp.src(".tmp/useref/*.html")
-    .pipe(gulp.dest("public"));
-});
-
-gulp.task("revreplace", ["moveHTML"], () => {
-  var manifest = gulp.src("./public/rev-manifest.json");
-
-  gulp.src("public/*.html")
-    .pipe($.revReplace({manifest: manifest}))
-    .pipe(gulp.dest("public"));
-});
-
-gulp.task("cssRevReplace", ['revision'], () => {
-  var manifest = gulp.src("./public/rev-manifest.json");
-
-  gulp.src("public/styles/*.css")
-    .pipe($.revReplace({manifest: manifest}))
-    .pipe(gulp.dest("public/styles"))
-});
 
 gulp.task('images', () => {
   return gulp.src('app/images/**/*')
@@ -99,7 +68,7 @@ gulp.task('images', () => {
       console.log(err);
       this.end();
     })))
-    .pipe(gulp.dest('.tmp/useref/images'));
+    .pipe(gulp.dest('public/images'));
 });
 
 gulp.task('ico', () => {
@@ -115,7 +84,7 @@ gulp.task('ico', () => {
         console.log(err);
         this.end();
       })))
-    .pipe(gulp.dest('.tmp/useref/ico'));
+    .pipe(gulp.dest('public/ico'));
 });
 
 gulp.task('fonts', () => {
@@ -204,7 +173,7 @@ gulp.task('wiredep', () => {
     .pipe(gulp.dest('app'));
 });
 
-gulp.task('build', ['lint', 'revreplace', 'cssRevReplace', 'fonts', 'extras'], () => {
+gulp.task('build', ['lint', 'html', 'images', 'ico','fonts', 'extras'], () => {
   return gulp.src('public/**/*').pipe($.size({title: 'build', gzip: true}));
 });
 
