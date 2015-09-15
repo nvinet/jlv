@@ -60,30 +60,30 @@ gulp.task('html', ['styles'], () => {
 gulp.task('revision', ['html', 'images', 'ico'], () => {
   return gulp.src(['.tmp/useref/**', "!.tmp/useref/*.html"])
     .pipe($.rev())
-    .pipe(gulp.dest('dist'))
+    .pipe(gulp.dest('public'))
     .pipe($.rev.manifest())
-    .pipe(gulp.dest('dist'));
+    .pipe(gulp.dest('public'));
 });
 
 gulp.task('moveHTML', ['revision'], () => {
   return gulp.src(".tmp/useref/*.html")
-    .pipe(gulp.dest("dist"));
+    .pipe(gulp.dest("public"));
 });
 
 gulp.task("revreplace", ["moveHTML"], () => {
-  var manifest = gulp.src("./dist/rev-manifest.json");
+  var manifest = gulp.src("./public/rev-manifest.json");
 
-  gulp.src("dist/*.html")
+  gulp.src("public/*.html")
     .pipe($.revReplace({manifest: manifest}))
-    .pipe(gulp.dest("dist"));
+    .pipe(gulp.dest("public"));
 });
 
 gulp.task("cssRevReplace", ['revision'], () => {
-  var manifest = gulp.src("./dist/rev-manifest.json");
+  var manifest = gulp.src("./public/rev-manifest.json");
 
-  gulp.src("dist/styles/*.css")
+  gulp.src("public/styles/*.css")
     .pipe($.revReplace({manifest: manifest}))
-    .pipe(gulp.dest("dist/styles"))
+    .pipe(gulp.dest("public/styles"))
 });
 
 gulp.task('images', () => {
@@ -123,7 +123,7 @@ gulp.task('fonts', () => {
     filter: '**/*.{eot,svg,ttf,woff,woff2}'
   }).concat('app/fonts/**/*'))
     .pipe(gulp.dest('.tmp/fonts'))
-    .pipe(gulp.dest('dist/fonts'));
+    .pipe(gulp.dest('public/fonts'));
 });
 
 gulp.task('extras', () => {
@@ -132,10 +132,10 @@ gulp.task('extras', () => {
     '!app/*.html'
   ], {
     dot: true
-  }).pipe(gulp.dest('dist'));
+  }).pipe(gulp.dest('public'));
 });
 
-gulp.task('clean', del.bind(null, ['.tmp', 'dist']));
+gulp.task('clean', del.bind(null, ['.tmp', 'public']));
 
 gulp.task('serve', ['styles', 'fonts'], () => {
   browserSync({
@@ -161,12 +161,12 @@ gulp.task('serve', ['styles', 'fonts'], () => {
   gulp.watch('bower.json', ['wiredep', 'fonts']);
 });
 
-gulp.task('serve:dist', () => {
+gulp.task('serve:public', () => {
   browserSync({
     notify: false,
     port: 9000,
     server: {
-      baseDir: ['dist']
+      baseDir: ['public']
     }
   });
 });
@@ -205,7 +205,7 @@ gulp.task('wiredep', () => {
 });
 
 gulp.task('build', ['lint', 'revreplace', 'cssRevReplace', 'fonts', 'extras'], () => {
-  return gulp.src('dist/**/*').pipe($.size({title: 'build', gzip: true}));
+  return gulp.src('public/**/*').pipe($.size({title: 'build', gzip: true}));
 });
 
 gulp.task('default', ['clean'], () => {
