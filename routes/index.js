@@ -6,4 +6,12 @@ router.get('/', function(req, res, next) {
   res.render('index', { title: 'JLV Design Ltd' });
 });
 
+router.get('/contact', function(req, res, next){
+  res.render('contact', { title: 'JLV Design Ltd' });
+});
+
+router.get('/about', function(req, res, next){
+  res.render('about', { title: 'JLV Design Ltd' });
+});
+
 module.exports = router;

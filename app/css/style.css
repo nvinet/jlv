@@ -613,11 +613,11 @@ footer{ width:100%; float:left;}
 .int-header.hero5{background:url(../images/hero5.gif) center no-repeat #94d6de; background-attachment:fixed;}
 .int-header.hero6{background:url(../images/hero6.gif) center no-repeat #3ac684; background-attachment:fixed;}
 .goes-up{ margin:0; transition-duration: 1500ms; -webkit-transition-duration: 1500ms; transition-timing-function: cubic-bezier(0.86, 0, 0.07, 1); -webkit-transition-timing-function: cubic-bezier(0.86, 0, 0.07, 1); transition-delay: 0.60s;}
-
+.int-header-no-img {margin-top:200px;}
 
 
 /* NEWS */
-.news{ width:100%; float:left; margin:100px 0; text-align:center;}
+.news{ width:100%; float:left; margin:100px 0;}
 .news .news-post{ width:100%; float:left; margin-bottom:60px;}
 .news .news-post figure{ width:100%; max-width:700px; display:inline-block;}
 .news .news-post figure img{ width:100%;}
@@ -627,7 +627,9 @@ footer{ width:100%; float:left;}
 .news .news-post figcaption small{ font-size:11px; color:#999; letter-spacing:2px;}
 .news .news-post figcaption p {font-weight:300; letter-spacing:1px; padding:0 12%;}
 .news .news-post figcaption blockquote{ display:inline-block; font-family:'Playfair Display', serif; font-style:italic; font-size:20px; margin:20px 0;}
-
+.news .h2 {
+  margin: 0;
+}
 
 
 
