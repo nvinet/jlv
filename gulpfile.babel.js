@@ -15,7 +15,7 @@ const dirs = {
   fonts: 'src/fonts',
   vendor_js: 'src/scripts/vendor',
   vendor_css: 'src/styles/vendor',
-  dest: 'public'
+  dest: 'app/public'
 };
 
 gulp.task('sass', () => {
@@ -146,7 +146,7 @@ gulp.task('extras', () => {
   }).pipe(gulp.dest(dirs.dest));
 });
 
-gulp.task('clean', del.bind(null, ['.tmp', 'public']));
+gulp.task('clean', del.bind(null, ['.tmp', dirs.dest]));
 
 gulp.task('serve', ['styles', 'fonts'], () => {
   browserSync({
