@@ -45,20 +45,16 @@ gulp.task("styles", () => {
     .pipe(gulp.dest(`./${dirs.dest}/styles/`))
 });
 
-function lint(files, options) {
-  return () => {
-    return gulp.src(files)
-      .pipe(reload({stream: true, once: true}))
-      .pipe($.eslint(options))
-      .pipe($.eslint.format())
-      .pipe($.if(!browserSync.active, $.eslint.failAfterError()));
-  };
-}
-
-gulp.task('lint', lint([
-  `${dirs.scripts}/**/*.js`,
-  `!${dirs.vendor_js}/**/*.js`
-]));
+gulp.task('lint', () => {
+  return gulp.src([
+      `${dirs.scripts}/**/*.js`,
+      `!${dirs.vendor_js}/**/*.js`
+    ])
+    .pipe(reload({stream: true, once: true}))
+    .pipe($.eslint())
+    .pipe($.eslint.format())
+    .pipe($.if(!browserSync.active, $.eslint.failAfterError()));
+});
 
 gulp.task('scripts:vendor', () => {
   return gulp.src([

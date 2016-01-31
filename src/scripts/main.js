@@ -1,1 +1,1 @@
-var jlv = jlv || {};
+const jlv = jlv || {};
