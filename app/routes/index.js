@@ -14,4 +14,8 @@ router.get('/about', function(req, res, next){
   res.render('about', { title: 'JLV Design Ltd' });
 });
 
+router.get('/frames', function(req, res, next){
+  res.render('frames', { title: 'JLV Design Ltd' });
+});
+
 module.exports = router;

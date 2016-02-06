@@ -1,9 +1,10 @@
 // generated on 2015-09-12 using generator-gulp-webapp 1.0.3
-/* eslint-disable no-console */
+/* eslint-disable no-console, no-inline-comments */
 import gulp from 'gulp';
 import gulpLoadPlugins from 'gulp-load-plugins';
 import browserSync from 'browser-sync';
 import del from 'del';
+import babel from 'gulp-babel';
 
 const $ = gulpLoadPlugins();
 const reload = browserSync.reload;
@@ -43,6 +44,7 @@ gulp.task('styles', () => {
       `${dirs.vendorCss}/style.css`
     ])
     .pipe($.concat('main.css'))
+    .pipe($.cssnano())
     .pipe(gulp.dest(`./${dirs.dest}/styles/`));
 });
 
@@ -89,8 +91,11 @@ gulp.task('scripts:main', () => {
       `${dirs.vendorJs}/scripts.js`,
       `${dirs.scripts}/main.js`
     ])
+    .pipe(babel({
+      presets: ['es2015']
+    }))
     .pipe($.concat('main.js'))
-    .pipe($.uglify())
+    .pipe($.uglify({compress: false})) // TODO fix the compression
     .pipe(gulp.dest(`./${dirs.dest}/scripts/`));
 });
 
