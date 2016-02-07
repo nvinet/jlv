@@ -4,7 +4,7 @@
     "node": ">=5.0.0"
   },
   "scripts": {
-    "start": "babel-node ./bin/www"
+    "start": "babel-node  --presets es2015 ./bin/www"
   },
   "dependencies": {
     "babel": "^6.3.26",
