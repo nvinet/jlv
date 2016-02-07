@@ -17,7 +17,8 @@ const dirs = {
   fonts: 'src/fonts',
   vendorJs: 'src/scripts/vendor',
   vendorCss: 'src/styles/vendor',
-  dest: 'app/public'
+  dest: 'app/public',
+  bower: './bower_components'
 };
 
 gulp.task('sass', () => {
@@ -33,18 +34,24 @@ gulp.task('sass', () => {
     .pipe(reload({stream: true}));
 });
 
-gulp.task('styles', () => {
+gulp.task('styles:plugins', () => {
   return gulp.src([
-      `${dirs.vendorCss}/animate.css`,
+      `${dirs.bower}/animate.css/animate.min.css`,
       `${dirs.vendorCss}/fpslineicons.css`,
       `${dirs.vendorCss}/settings.css`,
-      `${dirs.vendorCss}/swipebox.css`,
+      `${dirs.bower}/swipebox/src/css/swipebox.min.css`,
       `${dirs.vendorCss}/text-rotater.css`,
-      `${dirs.vendorCss}/bootstrap.css`,
+      `${dirs.bower}/bootstrap/dist/css/bootstrap.min.css`
+    ])
+    .pipe($.concat('plugins.css'))
+    .pipe(gulp.dest(`./${dirs.dest}/styles/`));
+});
+
+gulp.task('styles', () => {
+  return gulp.src([
       `${dirs.vendorCss}/style.css`
     ])
     .pipe($.concat('main.css'))
-    .pipe($.cssnano())
     .pipe(gulp.dest(`./${dirs.dest}/styles/`));
 });
 
@@ -61,7 +68,7 @@ gulp.task('lint', () => {
 
 gulp.task('scripts:vendor', () => {
   return gulp.src([
-      `${dirs.vendorJs}/jquery.min.js`
+      `${dirs.bower}/dist/jquery.min.js`
     ])
     .pipe($.concat('vendor.js'))
     .pipe(gulp.dest(`./${dirs.dest}/scripts/`));
@@ -69,15 +76,15 @@ gulp.task('scripts:vendor', () => {
 
 gulp.task('scripts:plugins', () => {
   return gulp.src([
-      `${dirs.vendorJs}/bootstrap.min.js`,
-      `${dirs.vendorJs}/waypoints.min.js`,
-      `${dirs.vendorJs}/jquery.counterup.min.js`,
+      `${dirs.bower}/bootstrap/dist/js/bootstrap.min.js`,
+      `${dirs.bower}/waypoints/waypoints.min.js`,
+      `${dirs.bower}/counterup/jquery.counterup.min.js`,
       `${dirs.vendorJs}/jquery.textrotater.js`,
-      `${dirs.vendorJs}/jquery.stellar.js`,
-      `${dirs.vendorJs}/jquery.vopacity.js`,
-      `${dirs.vendorJs}/wow.js`,
-      `${dirs.vendorJs}/masonry.min.js`,
-      `${dirs.vendorJs}/jquery.swipebox.js`,
+      `${dirs.bower}/stellar.js/jquery.stellar.min.js`,
+      `${dirs.bower}/VOpacity/jquery.vopacity.js`,
+      `${dirs.bower}/WOW/dist/wow.min.js`,
+      `${dirs.bower}/masonry/dist/masonry.pkgd.min.js`,
+      `${dirs.bower}/swipebox/src/js/jquery.swipebox.min.js`,
       `${dirs.vendorJs}/jquery.themepunch.tools.min.js`,
       `${dirs.vendorJs}/jquery.themepunch.revolution.min.js`
     ])
@@ -88,8 +95,7 @@ gulp.task('scripts:plugins', () => {
 gulp.task('scripts:main', () => {
   return gulp.src([
       `${dirs.vendorJs}/settings.js`,
-      `${dirs.vendorJs}/scripts.js`,
-      `${dirs.scripts}/main.js`
+      `${dirs.vendorJs}/scripts.js`
     ])
     .pipe(babel({
       presets: ['es2015']
@@ -188,6 +194,7 @@ gulp.task('build', [
   'scripts:vendor',
   'scripts:plugins',
   'scripts:main',
+  'styles:plugins',
   'styles',
   'images',
   'ico',
