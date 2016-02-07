@@ -17,15 +17,19 @@
             <div class="row">
                 <div class="col-xs-12">
                     <ul class="portfolio-masonry">
-                      {{>showcase_item imgPath='/images/work01.jpg' title='REAL HOMES' delay='0.05s' bgColor='bg-color1'}}
-                      {{>showcase_item imgPath='/images/work02.jpg' title='HOME STAGING' delay='0.10s' size='double' bgColor='bg-color3' }}
-                      {{>showcase_item imgPath='/images/work03.jpg' title='COSY' delay='0.15s' size='double' bgColor='bg-color4' }}
-                      {{>showcase_item imgPath='/images/work04.jpg' title='ART' delay='0.05s' size='double' bgColor='bg-color4' }}
-                      {{>showcase_item imgPath='/images/work05.jpg' title='COLOURS' delay='0.10s' size='double' bgColor='bg-color2' }}
-                      {{>showcase_item imgPath='/images/work06.jpg' title='CREATIVE' delay='0.15s' bgColor='bg-color1' }}
-                      {{>showcase_item imgPath='/images/work07.jpg' title='SOURCING' delay='0.05s' size='double' bgColor='bg-color1' }}
-                      {{>showcase_item imgPath='/images/work08.jpg' title='STYLING' delay='0.10s' size='double' bgColor='bg-color4' }}
-                      {{>showcase_item imgPath='/images/work09.jpg' title='UP-CYCLING' delay='0.15s' bgColor='bg-color3' }}
+                        {{#each data.tiles}}
+                            <li class="{{this.size}} wow fadeInUp" data-wow-delay="{{this.delay}}">
+                                <figure><img src="{{getVersionedPath this.imagePath}}" alt="Image">
+                                    <a href="{{getVersionedPath this.imagePath}}" data-rel="gallery" class="swipebox" title="{{toUpperCase this.title}}">
+                                        <figcaption class="{{this.bgColor}}">
+                                            <div class="table">
+                                                <div class="inner">{{toUpperCase this.title}}</div>
+                                            </div>
+                                        </figcaption>
+                                    </a>
+                                </figure>
+                            </li>
+                        {{/each}}
                     </ul>
                 </div>
                 <!-- end col-12 -->

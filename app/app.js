@@ -27,8 +27,11 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use(staticify.middleware);
 
 hbs.registerHelper("getVersionedPath", function(path){
-  //TODO have environment check to only perform in PROD (to use watches)
   return staticify.getVersionedPath(path);
+});
+
+hbs.registerHelper('toUpperCase', (str) => {
+  return str.toUpperCase();
 });
 
 app.use('/', routes);

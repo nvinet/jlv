@@ -1,0 +1,67 @@
+{
+  "tiles": [
+    {
+      "imagePath":"/images/work01.jpg",
+      "size": "",
+      "title": "Real Homes",
+      "bgColor": "bg-color1",
+      "delay": "0.05s"
+    },
+    {
+      "imagePath":"/images/work02.jpg",
+      "size": "double",
+      "title": "Home Staging",
+      "bgColor": "bg-color3",
+      "delay": "0.10s"
+    },
+    {
+      "imagePath":"/images/work03.jpg",
+      "size": "double",
+      "title": "Cosy",
+      "bgColor": "bg-color4",
+      "delay": "0.15s"
+    },
+    {
+      "imagePath":"/images/work04.jpg",
+      "size": "double",
+      "title": "Art",
+      "bgColor": "bg-color4",
+      "delay": "0.05s"
+    },
+    {
+      "imagePath":"/images/work05.jpg",
+      "size": "double",
+      "title": "Colours",
+      "bgColor": "bg-color2",
+      "delay": "0.10s"
+    },
+    {
+      "imagePath":"/images/work06.jpg",
+      "size": "",
+      "title": "Creative",
+      "bgColor": "bg-color1",
+      "delay": "0.15s"
+    },
+    {
+      "imagePath":"/images/work07.jpg",
+      "size": "double",
+      "title": "Sourcing",
+      "bgColor": "bg-color1",
+      "delay": "0.05s"
+    },
+    {
+      "imagePath":"/images/work08.jpg",
+      "size": "double",
+      "title": "Styling",
+      "bgColor": "bg-color4",
+      "delay": "0.10s"
+    },
+    {
+      "imagePath":"/images/work09.jpg",
+      "size": "",
+      "title": "Up-cycling",
+      "bgColor": "bg-color3",
+      "delay": "0.15s"
+    }
+  ]
+}

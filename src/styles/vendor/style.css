@@ -741,7 +741,7 @@ footer{ width:100%; float:left;}
 
 
 /* SERVICES LIST */
-.services-list{ width:100%; float:left; padding:100px 0;}
+.services-list{ width:100%; float:left; padding:50px 0;}
 .services-list h4{ font-weight:800; font-size:14px; margin-bottom:40px; position:relative; letter-spacing:3px;}
 .services-list h4:after{content:''; width:50px; height:1px; background:#ee3643; position:absolute; left:0; bottom:-22px;}
 .services-list p{font-weight:300; letter-spacing:1px;}
@@ -856,6 +856,14 @@ footer .sub-footer ul li a{ float:left; font-size:12px; font-weight:700; color:#
 .career .col-md-4{ margin-bottom:80px;}
 footer .sub-footer ul{ float:left; margin-top:20px;}
 
+}
+
+/* SwipeBox path override */
+#swipebox-close {
+  background-image: url(../images/icons.png);
+}
+#swipebox-slider .slide-loading {
+  background: url(../images/loader.gif) no-repeat center center;
 }
 
 
