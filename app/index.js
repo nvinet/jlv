@@ -7,6 +7,7 @@ import hbs from 'hbs';
 import staticify from 'staticify';
 
 import routes from './routes/index';
+import hbsHelpers from './hbs/helpers';
 
 const $staticify = staticify(path.join(__dirname, 'public'));
 const app = express();
@@ -23,6 +24,14 @@ app.use(bodyParser.urlencoded({extended: false}));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 app.use($staticify.middleware);
+
+hbs.registerHelper('getVersionedPath', ($path) => {
+  return $staticify.getVersionedPath($path);
+});
+
+hbs.registerHelper('toUpperCase', (str) => {
+  return str.toUpperCase();
+});
 
 app.use('/', routes);
 

@@ -2,12 +2,15 @@ import hbs from 'hbs';
 import path from 'path';
 import staticify from 'staticify';
 
-const $staticify = staticify(path.join(__dirname, 'public'));
+const hbsHelper = () => {
+  const $staticify = staticify(path.join(__dirname, 'public'));
+  hbs.registerHelper('getVersionedPath', ($path) => {
+    return $staticify.getVersionedPath($path);
+  });
 
-hbs.registerHelper('getVersionedPath', (path) => {
-  return $staticify.getVersionedPath(path);
-});
+  hbs.registerHelper('toUpperCase', (str) => {
+    return str.toUpperCase();
+  });
+};
 
-hbs.registerHelper('toUpperCase', (str) => {
-  return str.toUpperCase();
-});
+export default hbsHelper;

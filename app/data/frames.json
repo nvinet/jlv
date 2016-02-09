@@ -1,6 +1,24 @@
 {
   "frames": [
     {
+      "imagePath":"/images/frames/00.jpg",
+      "size": "",
+      "title": "Day at teh beach – 10x10 cm",
+      "bgColor": "bg-color1"
+    },
+    {
+      "imagePath":"/images/frames/01.jpg",
+      "size": "",
+      "title": "God save the Queen – 17x12 cm",
+      "bgColor": "bg-color1"
+    },
+    {
+      "imagePath":"/images/frames/02.jpg",
+      "size": "",
+      "title": "The Kid – 17x12 cm",
+      "bgColor": "bg-color1"
+    },
+    {
       "imagePath":"/images/frames/03.jpg",
       "size": "",
       "title": "Summer holiday – 17x12 cm",
@@ -238,6 +256,12 @@
       "imagePath":"/images/frames/43.jpg",
       "size": "",
       "title": "The cup cake – 19x14cm",
+      "bgColor": "bg-color1"
+    },
+    {
+      "imagePath":"/images/frames/44.jpg",
+      "size": "",
+      "title": "Concours de chateaux de sable – 27.5x22.5cm",
       "bgColor": "bg-color1"
     },
     {
