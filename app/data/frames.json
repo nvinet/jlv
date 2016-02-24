@@ -21,7 +21,7 @@
     {
       "imagePath":"/images/frames/03.jpg",
       "size": "",
-      "title": "Summer holiday – 17x12 cm",
+      "title": "The princess and the unicorn - 19x14cm",
       "bgColor": "bg-color1"
     },
     {
@@ -45,7 +45,7 @@
     {
       "imagePath":"/images/frames/08.jpg",
       "size": "",
-      "title": "The acrobats – 19x14cm",
+      "title": "Sneaky thieves - 19x14cm",
       "bgColor": "bg-color1"
     },
     {
@@ -81,7 +81,7 @@
     {
       "imagePath":"/images/frames/14.jpg",
       "size": "",
-      "title": "\"It's too cold!\" – 19x14cm",
+      "title": "Where's the owl? - 19x14cm",
       "bgColor": "bg-color1"
     },
     {
@@ -99,7 +99,7 @@
     {
       "imagePath":"/images/frames/17.jpg",
       "size": "",
-      "title": "Prepare for take-off – 17x12 cm",
+      "title": "Aurora borealis - 19x14cm",
       "bgColor": "bg-color1"
     },
     {
@@ -153,13 +153,13 @@
     {
       "imagePath":"/images/frames/26.jpg",
       "size": "",
-      "title": "Love your bag #2 – 19x14cm",
+      "title": "S.O.S - 19x14cm",
       "bgColor": "bg-color1"
     },
     {
       "imagePath":"/images/frames/27.jpg",
       "size": "",
-      "title": "\"Say cheese\" #3 – 19x14cm",
+      "title": "SOLD - \"Say cheese\" #3 – 19x14cm",
       "bgColor": "bg-color1"
     },
     {
@@ -268,6 +268,72 @@
       "imagePath":"/images/frames/45.jpg",
       "size": "",
       "title": "Good catch! – 19x14cm",
+      "bgColor": "bg-color1"
+    },
+    {
+      "imagePath":"/images/frames/46.jpg",
+      "size": "",
+      "title": "Straw hats - 19x14cm",
+      "bgColor": "bg-color1"
+    },
+    {
+      "imagePath":"/images/frames/47.jpg",
+      "size": "",
+      "title": "Best actress - 19x14cm",
+      "bgColor": "bg-color1"
+    },
+    {
+      "imagePath":"/images/frames/48.jpg",
+      "size": "",
+      "title": "Summer holiday – 17x12 cm",
+      "bgColor": "bg-color1"
+    },
+    {
+      "imagePath":"/images/frames/49.jpg",
+      "size": "",
+      "title": "the Hounds - 19x14cm",
+      "bgColor": "bg-color1"
+    },
+    {
+      "imagePath":"/images/frames/50.jpg",
+      "size": "",
+      "title": "Sliding down - 19x14cm",
+      "bgColor": "bg-color1"
+    },
+    {
+      "imagePath":"/images/frames/51.jpg",
+      "size": "",
+      "title": "SOLD - The acrobats – 19x14cm",
+      "bgColor": "bg-color1"
+    },
+    {
+      "imagePath":"/images/frames/52.jpg",
+      "size": "",
+      "title": "Love your bag #2 – 19x14cm",
+      "bgColor": "bg-color1"
+    },
+    {
+      "imagePath":"/images/frames/53.jpg",
+      "size": "",
+      "title": "Prepare for take-off – 17x12 cm",
+      "bgColor": "bg-color1"
+    },
+    {
+      "imagePath":"/images/frames/54.jpg",
+      "size": "",
+      "title": "\"It's too cold!\" – 19x14cm",
+      "bgColor": "bg-color1"
+    },
+    {
+      "imagePath":"/images/frames/55.jpg",
+      "size": "",
+      "title": "HELP! - 19x14cm",
+      "bgColor": "bg-color1"
+    },
+    {
+      "imagePath":"/images/frames/56.jpg",
+      "size": "",
+      "title": "The Race - 19x14cm",
       "bgColor": "bg-color1"
     }
   ]
