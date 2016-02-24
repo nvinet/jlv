@@ -25,13 +25,7 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 app.use($staticify.middleware);
 
-hbs.registerHelper('getVersionedPath', ($path) => {
-  return $staticify.getVersionedPath($path);
-});
-
-hbs.registerHelper('toUpperCase', (str) => {
-  return str.toUpperCase();
-});
+hbsHelpers($staticify);
 
 app.use('/', routes);
 

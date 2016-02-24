@@ -28,7 +28,7 @@
             <div class="row">
                 <div class="col-xs-12">
                     <ul class="portfolio-masonry">
-                      {{#each data.frames}}
+                      {{#foreach data.frames}}
                           <li class="{{this.size}} wow fadeInUp">
                               <figure><img src="{{getVersionedPath this.imagePath}}" alt="Image">
                                   <a href="{{getVersionedPath this.imagePath}}" data-rel="gallery" class="swipebox"
@@ -41,7 +41,7 @@
                                   </a>
                               </figure>
                           </li>
-                      {{/each}}
+                      {{/foreach}}
                     </ul>
                 </div>
                 <!-- end col-12 -->
