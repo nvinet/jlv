@@ -20,6 +20,10 @@ router.get('/about', (req, res) => {
   res.render('about', {title: 'JLV Design Ltd'});
 });
 
+router.get('/testimonials', (req, res) => {
+  res.render('testimonials', {title: 'JLV Design Ltd'});
+});
+
 router.get('/stars', (req, res) => {
   res.render('stars', {
     title: 'JLV Design Ltd',

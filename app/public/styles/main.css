@@ -866,5 +866,6 @@ footer .sub-footer ul{ float:left; margin-top:20px;}
   background: url(../images/loader.gif) no-repeat center center;
 }
 
-
-
+.testimonial-item {
+  margin-bottom: 20px;
+}

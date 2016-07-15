@@ -2,14 +2,14 @@
   "name": "jlv",
   "private": true,
   "dependencies": {
-    "jquery": "2.2.0",
+    "jquery": "3.1.0",
     "counterup": "1.0.0",
     "VOpacity": "https://github.com/tojibon/jQuery-VOpacity.git#1.0.0",
     "stellar.js": "0.6.2",
     "bootstrap": "3.3.6",
     "animate.css": "3.1.0",
-    "swipebox": "1.4.1",
-    "masonry": "4.0.0",
+    "swipebox": "1.4.4",
+    "masonry": "4.1.0",
     "WOW": "1.1.2",
     "waypoints": "2.0.5"
   },

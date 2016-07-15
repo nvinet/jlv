@@ -50,8 +50,8 @@
   // Wow animations
   new WOW(
     {
-      animateClass: 'animated',
-      offset: 50
+      'animateClass': 'animated',
+      'offset': 50
     }
   ).init();
 
@@ -59,8 +59,14 @@
   $(window).load(() => {
     const $container = $('.portfolio-masonry');
     $container.masonry({
-      columnWidth: 0,
-      itemSelector: '.portfolio-masonry li'
+      'columnWidth': 0,
+      'itemSelector': '.portfolio-masonry li'
+    });
+
+    const $container2 = $('.testimonial');
+    $container2.masonry({
+      'columnWidth': 0,
+      'itemSelector': '.testimonial-item'
     });
   });
 })(jQuery);
