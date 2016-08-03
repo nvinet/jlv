@@ -24,6 +24,25 @@ router.get('/testimonials', (req, res) => {
   res.render('testimonials', {title: 'JLV Design Ltd'});
 });
 
+router.get('/projects', (req, res) => {
+  res.render('projects', {title: 'JLV Design Ltd'});
+});
+
+router.get('/projects/muswellHill1', (req, res) => {
+  res.render('muswellHill1', {title: 'JLV Design Ltd', data: homeData});
+});
+
+router.get('/projects/muswellHill2', (req, res) => {
+  res.render('muswellHill2', {title: 'JLV Design Ltd', data: homeData});
+});
+
+router.get('/projects/gardenOffice', (req, res) => {
+  res.render('gardenOffice', {
+    title: 'JLV Design Ltd',
+    data: homeData
+  });
+});
+
 router.get('/stars', (req, res) => {
   res.render('stars', {
     title: 'JLV Design Ltd',

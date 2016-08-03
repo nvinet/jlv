@@ -19,15 +19,9 @@
                     <ul class="portfolio-masonry">
                         {{#foreach data.tiles}}
                             <li class="{{this.size}} wow fadeInUp" data-wow-delay="{{this.delay}}">
-                                <figure><img src="{{getVersionedPath this.imagePath}}" alt="Image">
-                                    <a href="{{getVersionedPath this.imagePath}}" data-rel="gallery" class="swipebox" title="{{toUpperCase this.title}}">
-                                        <figcaption class="{{this.bgColor}}">
-                                            <div class="table">
-                                                <div class="inner">{{toUpperCase this.title}}</div>
-                                            </div>
-                                        </figcaption>
-                                    </a>
-                                </figure>
+                                <a href="{{this.location}}">
+                                    <img src="{{getVersionedPath this.imagePath}}" alt="Image">
+                                </a>
                             </li>
                         {{/foreach}}
                     </ul>

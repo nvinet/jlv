@@ -1,67 +1,58 @@
 {
   "tiles": [
     {
-      "imagePath":"/images/work01.jpg",
+      "imagePath":"/images/Showcase_MH1_3.jpg",
       "size": "",
-      "title": "Real Homes",
-      "bgColor": "bg-color1",
-      "delay": "0.05s"
+      "delay": "0.15s",
+      "location": "/projects/muswellHill1"
     },
     {
-      "imagePath":"/images/work02.jpg",
+      "imagePath":"/images/Showcase_MH1_2.jpg",
       "size": "double",
-      "title": "Home Staging",
-      "bgColor": "bg-color3",
-      "delay": "0.10s"
+      "delay": "0.10s",
+      "location": "/projects/muswellHill1"
     },
     {
-      "imagePath":"/images/work03.jpg",
+      "imagePath":"/images/Showcase_MH1_1.jpg",
       "size": "double",
-      "title": "Cosy",
-      "bgColor": "bg-color4",
-      "delay": "0.15s"
+      "delay": "0.05s",
+      "location": "/projects/muswellHill1"
     },
     {
-      "imagePath":"/images/work04.jpg",
-      "size": "double",
-      "title": "Art",
-      "bgColor": "bg-color4",
-      "delay": "0.05s"
-    },
-    {
-      "imagePath":"/images/work05.jpg",
-      "size": "double",
-      "title": "Colours",
-      "bgColor": "bg-color2",
-      "delay": "0.10s"
-    },
-    {
-      "imagePath":"/images/work06.jpg",
+      "imagePath":"/images/Showcase_MH2_1.jpg",
       "size": "",
-      "title": "Creative",
-      "bgColor": "bg-color1",
-      "delay": "0.15s"
+      "delay": "0.05s",
+      "location": "/projects/muswellHill2"
     },
     {
-      "imagePath":"/images/work07.jpg",
+      "imagePath":"/images/Showcase_MH2_2.jpg",
       "size": "double",
-      "title": "Sourcing",
-      "bgColor": "bg-color1",
-      "delay": "0.05s"
+      "delay": "0.10s",
+      "location": "/projects/muswellHill2"
     },
     {
-      "imagePath":"/images/work08.jpg",
+      "imagePath":"/images/Showcase_MH2_3.jpg",
       "size": "double",
-      "title": "Styling",
-      "bgColor": "bg-color4",
-      "delay": "0.10s"
+      "delay": "0.15s",
+      "location": "/projects/muswellHill2"
     },
     {
-      "imagePath":"/images/work09.jpg",
+      "imagePath":"/images/Showcase_GO_1.jpg",
+      "size": "double",
+      "delay": "0.05s",
+      "location": "/projects/gardenOffice"
+    },
+    {
+      "imagePath":"/images/Showcase_GO_2.jpg",
+      "size": "double",
+      "delay": "0.10s",
+      "location": "/projects/gardenOffice"
+    },
+    {
+      "imagePath":"/images/Showcase_GO_3.jpg",
       "size": "",
-      "title": "Up-cycling",
-      "bgColor": "bg-color3",
-      "delay": "0.15s"
+      "delay": "0.15s",
+      "location": "/projects/gardenOffice"
     }
   ]
 }

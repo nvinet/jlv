@@ -462,6 +462,7 @@ footer{ width:100%; float:left;}
 .showcase h5{ color:#cbcbc9; font-size:15px; font-weight:800; letter-spacing:2px;}
 .showcase .shape{font-family:jaapokki; color:#fff; font-size:30px; margin:40px 0;}
 .showcase .portfolio{ width:100%; float:left; margin-top:-158px;}
+.showcase .portfolio .container .row { margin-bottom: 30px;}
 .showcase .portfolio *{-webkit-transition: .15s ease-in-out;-moz-transition: .15s ease-in-out;-ms-transition: .15s ease-in-out; -o-transition: .15s ease-in-out; transition: .15s ease-in-out;}
 .showcase .portfolio-masonry{ width:100%; float:left; position:relative;}
 .showcase .portfolio-masonry li{ width:20%; float:left;}
@@ -572,8 +573,8 @@ footer{ width:100%; float:left;}
 .slider{ width:100%; height:100%; background:#1d1d1d; float:left; position:relative; overflow:hidden; z-index:3;}
 .slider .slider-inner{ width:100%; height:100%; float:left; position:fixed;}
 .slider .banner { width:100%; height:100%; float:left; margin-top:90px;}
-.slider h2{font-size:80px; color:#fff; letter-spacing:20px;}
-.slider h5{font-size:40px; color:#fff; letter-spacing:5px;}
+.slider h2{font-size:80px; color:#fff; letter-spacing:20px; display: none}
+.slider h5{font-size:40px; color:#fff; letter-spacing:5px; display: none}
 .slider .video-bg{ width:100%; height:100%; float:left; position:relative; overflow:hidden;}
 .slider .video-bg:after{content:''; width:100%; height:100%; position:absolute; left:0; top:0; background:rgba(238,54,67,0.8); z-index:2;}
 .slider .video-bg video{ width:100%; min-height:100%; float:left; position:absolute; left:0; top:0; z-index:1;}
