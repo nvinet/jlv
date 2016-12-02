@@ -68,7 +68,7 @@ gulp.task('lint', () => {
 
 gulp.task('scripts:vendor', () => {
   return gulp.src([
-      `${dirs.bower}/dist/jquery.min.js`
+      `${dirs.bower}/jquery/dist/jquery.js`
     ])
     .pipe($.concat('vendor.js'))
     .pipe(gulp.dest(`./${dirs.dest}/scripts/`));

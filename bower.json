@@ -2,7 +2,7 @@
   "name": "jlv",
   "private": true,
   "dependencies": {
-    "jquery": "3.1.0",
+    "jquery": "2.2.0",
     "counterup": "1.0.0",
     "VOpacity": "https://github.com/tojibon/jQuery-VOpacity.git#1.0.0",
     "stellar.js": "0.6.2",
