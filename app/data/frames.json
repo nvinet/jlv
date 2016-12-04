@@ -1,6 +1,72 @@
 {
   "frames": [
     {
+      "imagePath":"/images/globes/globe_1.jpg",
+      "size": "",
+      "title": "La cage aux oiseaux – (h30 cm) £75",
+      "bgColor": "bg-color1"
+    },
+    {
+      "imagePath":"/images/globes/globe_2.jpg",
+      "size": "",
+      "title": "L'escarpolette #2 – (h19 cm) £55",
+      "bgColor": "bg-color1"
+    },
+    {
+      "imagePath":"/images/globes/globe_3.jpg",
+      "size": "",
+      "title": "One G&T please – (h19 cm) £55",
+      "bgColor": "bg-color1"
+    },
+    {
+      "imagePath":"/images/globes/globe_4.jpg",
+      "size": "",
+      "title": "Les filles – (h19 cm) SOLD",
+      "bgColor": "bg-color1"
+    },
+    {
+      "imagePath":"/images/globes/globe_5.jpg",
+      "size": "",
+      "title": "La sieste – (h19 cm) SOLD",
+      "bgColor": "bg-color1"
+    },
+    {
+      "imagePath":"/images/globes/globe_6.jpg",
+      "size": "",
+      "title": "Best of Summer – (h10.50 cm) £35",
+      "bgColor": "bg-color1"
+    },
+    {
+      "imagePath":"/images/globes/globe_7.jpg",
+      "size": "",
+      "title": "Un dimanche a la mer #1 – (h10.50 cm) £35",
+      "bgColor": "bg-color1"
+    },
+    {
+      "imagePath":"/images/globes/globe_8.jpg",
+      "size": "",
+      "title": "Mer démontée – (h10.50 cm) £35",
+      "bgColor": "bg-color1"
+    },
+    {
+      "imagePath":"/images/globes/globe_9.jpg",
+      "size": "",
+      "title": "Un dimanche a la mer #2 – (h10.50 cm) £35",
+      "bgColor": "bg-color1"
+    },
+    {
+      "imagePath":"/images/globes/globe_10.jpg",
+      "size": "",
+      "title": "L'escarpolette #1 – (h19 cm) SOLD",
+      "bgColor": "bg-color1"
+    },
+    {
+      "imagePath":"/images/globes/globe_11.jpg",
+      "size": "",
+      "title": "Les papillons – (h30 cm) £75",
+      "bgColor": "bg-color1"
+    },
+    {
       "imagePath":"/images/frames/00.jpg",
       "size": "",
       "title": "SOLD - Day at the beach – 10x10 cm",
