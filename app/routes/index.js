@@ -40,6 +40,10 @@ router.get('/projects/muswellHill3', (req, res) => {
   res.render('muswellHill3', {title: 'JLV Design Ltd', data: homeData});
 });
 
+router.get('/projects/muswellHill4', (req, res) => {
+  res.render('muswellHill4', {title: 'JLV Design Ltd', data: homeData});
+});
+
 router.get('/projects/shoreditchPark', (req, res) => {
   res.render('shoreditchPark', {title: 'JLV Design Ltd', data: homeData});
 });
