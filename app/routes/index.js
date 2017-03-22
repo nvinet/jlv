@@ -48,6 +48,10 @@ router.get('/projects/shoreditchPark', (req, res) => {
   res.render('shoreditchPark', {title: 'JLV Design Ltd', data: homeData});
 });
 
+router.get('/projects/finchley', (req, res) => {
+  res.render('finchley', {title: 'JLV Design Ltd', data: homeData});
+});
+
 router.get('/projects/gardenOffice', (req, res) => {
   res.render('gardenOffice', {
     title: 'JLV Design Ltd',
