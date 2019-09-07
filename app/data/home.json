@@ -17,42 +17,6 @@
       "size": "double",
       "delay": "0.05s",
       "location": "/projects/muswellHill1"
-    },
-    {
-      "imagePath":"/images/Showcase_MH2_1.jpg",
-      "size": "",
-      "delay": "0.05s",
-      "location": "/projects/muswellHill2"
-    },
-    {
-      "imagePath":"/images/Showcase_MH2_2.jpg",
-      "size": "double",
-      "delay": "0.10s",
-      "location": "/projects/muswellHill2"
-    },
-    {
-      "imagePath":"/images/Showcase_MH2_3.jpg",
-      "size": "double",
-      "delay": "0.15s",
-      "location": "/projects/muswellHill2"
-    },
-    {
-      "imagePath":"/images/Showcase_GO_1.jpg",
-      "size": "double",
-      "delay": "0.05s",
-      "location": "/projects/gardenOffice"
-    },
-    {
-      "imagePath":"/images/Showcase_GO_2.jpg",
-      "size": "double",
-      "delay": "0.10s",
-      "location": "/projects/gardenOffice"
-    },
-    {
-      "imagePath":"/images/Showcase_GO_3.jpg",
-      "size": "",
-      "delay": "0.15s",
-      "location": "/projects/gardenOffice"
     }
   ]
 }
